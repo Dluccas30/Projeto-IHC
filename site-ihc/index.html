@@ -1,0 +1,279 @@
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Road Classe</title>
+    <link href="estilo/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+      body{
+          background: #333;
+
+}
+
+    </style>
+  </head>
+  <body>
+      <header>
+        <div class="center">
+            <div class="logo"><img src="imagens/logo.png"></div>
+        </div>
+
+        <nav class="menu-dropdown">
+            <ul id="menu-h">
+              <div class="login">
+                <div class="perfil"><img src="imagens/perfil.jpg"></div>
+                <li><a href="..\Login_v4\login.html">Login</a>
+                </li>
+              </div>
+
+                <li><a href="./loja.html">Loja Online</a>
+                    <ul>
+                        <li><a href="pecas.html">Peças</a></li>
+                        <li><a href="acessorios.html">Acessórios</a></li>
+                        <li><a href="rodaepneu.html">Rodas e Pneus</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="./serviços.html">Serviços</a>
+                    <ul>
+                        <li><a href="#">Vistorias</a></li>
+                        <li><a href="#">Instalações</a></li>
+                        <li><a href="#">Manutenções</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="./atendimento.html">Atendimento</a>
+                    <ul>
+                        <li><a href="#">Automático</a></li>
+                        <li><a href="#">Contatos</a></li>
+                        <li><a href="#">Agendamentos</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="./sobre-nos.html">Sobre Nós</a>
+                    <ul>
+                        <li><a href="#">História</a></li>
+                        <li><a href="#">Parceiros</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+      </header>
+
+      <main>
+
+        <section class="container-top">
+
+          <div class="img-slider">
+      <div class="slide active">
+        <img src="imagens/banner-1.png" alt="">
+      </div>
+      <div class="slide">
+        <img src="imagens/banner-2.png" alt="">
+      </div>
+      <div class="slide">
+        <img src="imagens/banner-3.png" alt="">
+      </div>
+      <div class="slide">
+        <img src="imagens/banner-4.png" alt="">
+      </div>
+      <div class="navigation">
+        <div class="btn active"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 10000);
+      }
+      repeater();
+    }
+    repeat();
+    </script>
+
+
+        </section>
+
+
+              <section class="container-main">
+                    <div class="high-torque">
+                      <div id="body" class="container" class="audi">
+                       <div class="card">
+                         <div class="face face1">
+                           <div class="content">
+                             <img class="imagens" src="imagens/logo-1.png" alt="high torque"
+
+                             width="250px"height="80px">
+                             <h3>bmw</h3>
+
+                           </div>
+                         </div>
+                         <div class="face face2">
+                           <div class="content">
+                             <p>Conheça a maior rede de oficina mecânica do Brasil, High Torque Car Service, fazemos o diagnóstico prévio do seu veículo com ferramental de ponta.</p>
+                           <a class="verprodutos" href="https://www.hightorque.com.br/">Entre em contato</a></div>
+                           </div>
+                       </div>
+                     </div>
+                   </div>
+
+
+                   <div class="tec-one">
+                     <div id="body" class="container" class="audi">
+                      <div class="card">
+                        <div class="face face1">
+                          <div class="content">
+                            <img class="imagens" src="imagens/logo-2.png" alt="tec one"
+
+                            width="250px"height="80px">
+                            <h3>bmw</h3>
+
+                          </div>
+                        </div>
+                        <div class="face face2">
+                          <div class="content">
+                            <p>Na Tec One Car Service, nós nos esforçamos para oferecer os melhores níveis de serviços a todos os nossos clientes, garantindo uma experiência de condução segura e agradável. </p>
+                          <a class="verprodutos" href="http://www.teconecs.com.br/">Entre em contato</a></div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="soldera">
+                    <div id="body" class="container" class="audi">
+                     <div class="card">
+                       <div class="face face1">
+                         <div class="content">
+                           <img class="imagens" src="imagens/logo-3.png" alt="soldera mecânica"
+
+                           width="250px"height="80px">
+                           <h3>bmw</h3>
+
+                         </div>
+                       </div>
+                       <div class="face face2">
+                         <div class="content">
+                           <p>Para manter a qualidade do serviço, trabalhamos com equipamentos e ferramentas de ultima geração para atender toda as gamas, desde os mais populares até os veículos premium de luxo e esportivos.</p>
+                         <a class="verprodutos" href="https://www.soldera.com.br/">Entre em contato</a></div>
+                         </div>
+                     </div>
+                   </div>
+                 </div>
+              </section>
+
+      </main>
+
+
+              <footer>
+                <section class="container-footer">
+                  <div class="minilogo"><img src="imagens/logo-pe.png" alt="minilogo"></div>
+                  <li class="sobre"><h1>Sobre</h1>
+                      <ul>
+                        <p>Endereço</p>
+                        <p>Quem Somos</p>
+                        <p>Fornecedores</p>
+                        <p>Termos e Condições</p>
+                      </ul>
+                  </li>
+
+                  <li><h1>Suporte</h1>
+                      <ul>
+                        <p>Atendimento</p>
+                        <p>Telefones</p>
+                        <p>Duvidas Frequentes</p>
+                        <p>Políticas de Privacidade</p>
+                      </ul>
+
+                  </li>
+
+                  <li class="parcerias"><h1>Parcerias</h1>
+                      <ul>
+                    <a href="https://www.hightorque.com.br/"><p>High Torque</p></a>
+                    <a href="http://www.teconecs.com.br/"><p>Tec One</p></a>
+                    <a href="https://www.soldera.com.br/"><p>Soldera</p></a>
+                    <p>MC Mecânica</p>
+                      </ul>
+                  </li>
+
+                  <section class="container-sociais">
+                      <a href="https://twitter.com/"><div class="twitter"><img src="imagens/twitter.png"></div></a>
+                      <a href="https://pt-br.facebook.com/"><div class="facebook"><img src="imagens/facebook.png"></div></a>
+                      <a href="https://www.instagram.com/"><div class="instagram"><img src="imagens/instagram.png"></div></a>
+                        <div class="button">
+                          <a href="https://web.whatsapp.com/"><button class="btn-1">Contato</button></a>
+                        </div>
+                  </section>
+
+                </section>
+
+                <div class="pé">
+                <li><h1>Road Classe @2022</h1>
+                  <ul>
+                  <p>Todos os direitos reservados. A utilização e o acesso às informações neste site estão sujeitos a Termos e Condições estabelecidos em nosso acordo legal.</p>
+                  </ul>
+                </li>
+                </div>
+
+
+
+
+
+              </footer>
+
+
+  </body>
+</html>
